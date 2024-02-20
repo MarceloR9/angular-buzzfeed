@@ -70,4 +70,12 @@ export class QuizComponent implements OnInit {
 
     return result
   }
+
+  async restartQuiz() {
+    this.finished = false;
+    this.answerSelected = '';
+    this.answers = [];
+    this.questionIndex = 0;
+    this.questionSelected = this.questions[this.questionIndex];
+  }
 }
